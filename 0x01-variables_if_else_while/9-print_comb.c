@@ -14,7 +14,7 @@ int main(void)
 		if (k > 0)
 		{
 			putchar(',');
-			putchat(' ');
+			putchar(' ');
 		}
 	}
 	putchar('\n');
