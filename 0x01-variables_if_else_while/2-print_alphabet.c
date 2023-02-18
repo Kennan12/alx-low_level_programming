@@ -2,16 +2,18 @@
 
 /**
  * main - print lowercase alphabet
- * Return: 0
+ * Return: 0 (success)
  */
 int main(void)
 {
-	char lc;
-	
-	for (lc = 'a'; lc <= 'z'; lc++);
-	{
-		putchar(lc);
-	}
-	putchar('\n');
+	char k;
+
+	k = 'a';
+	while
+		(k <= 'z') {
+			putchar(k);
+			k++;
+		}
+	putchar('\n')
 	return (0);
 }
