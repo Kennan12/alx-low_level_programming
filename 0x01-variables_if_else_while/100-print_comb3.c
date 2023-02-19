@@ -10,8 +10,9 @@ int main(void)
 {
 	int a, k;
 
-	for (a = '0'; a > '9'; a++)
+	for (a = '0'; a < '9'; a++)
 	{
+		
 		for (k = a + 1; k <= '9'; k++)
 		{
 		if (k != a)
