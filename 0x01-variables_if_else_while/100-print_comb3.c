@@ -12,7 +12,6 @@ int main(void)
 
 	for (a = '0'; a < '9'; a++)
 	{
-		
 		for (k = a + 1; k <= '9'; k++)
 		{
 		if (k != a)
