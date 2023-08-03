@@ -1,16 +1,37 @@
 #include "main.h"
+#define BET_SIZE 8
 
 /**
- * clear_bit - sets a bit at a given index to 1
- * @n: pointer to the number to change
- * @index: index of the bit set to 1
- * Return: 1 for success, -1 for failure
+ * powX - powers a number b to the p's power
+ * @b: base
+ * @p: power
+ * Return: return b to the power of a
+ */
+unsigned long int powX(int b, int p)
+{
+	unsigned long int ans = 1;
+
+	while (p)
+	{
+		ans *= b;
+		p--;
+	}
+	return (ans);
+}
+
+/**
+ * clear_bit - sets bit to zero at index
+ * @n: input integer
+ * @index: returns the value of a bit at a given index
+ * Return: 1 for sucess -1 for failure
  */
 int clear_bit(unsigned long int *n, unsigned int index)
 {
-	if (index > 63)
-		return (-1);
+	unsigned long int test;
 
-	*n = (-(1UL << index) & *n);
+	if (index > sizeof(n) * BET_SIZE - 1)
+		return (-1);
+	test = powX(2, index);
+	*n = (*n & test) ? *n ^ test : *n;
 	return (1);
 }
