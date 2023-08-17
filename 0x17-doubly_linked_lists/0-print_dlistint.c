@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * print_distint - prints all the elements of a distint_t list.
+ * print_dlistint - prints all the elements of a distint_t list.
  * @h: pointer to the list.
  * Return: number of nodes.
  **/
