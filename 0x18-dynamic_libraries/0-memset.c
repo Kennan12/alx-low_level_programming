@@ -2,7 +2,7 @@
 
 /**
  * _memset - fills memor with constant byte
- * @S: memory area filled
+ * @s: memory area filled
  * @b: char to copy
  * @n: number of times to copy b
  * Return: pointer to yhe memory area s
