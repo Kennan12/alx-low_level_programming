@@ -1,6 +1,6 @@
-#include "hash_table.h"
+#include "hash_tables.h"
 /**
- * hsh_table_set - Adds an element to the hash table
+ * hash_table_set - Adds an element to the hash table
  * @ht: hash table to add to
  * @key: key to add
  * @value: value to store for key
@@ -23,8 +23,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		{
 			if (strcmp(tmp->key, key) == 0)
 			{
-				tmp->value = strdup(value)
-					return (1);
+				tmp->value = strdup(value);
+				return (1);
 			}
 			tmp = tmp->next;
 		}
@@ -41,4 +41,3 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	ht->array[idx] = newpair;
 	return (1);
 }
-

@@ -1,4 +1,4 @@
-#include "hash_table.h"
+#include "hash_tables.h"
 /**
  * hash_table_get - Retrive a value assoiciated with a key
  * @ht: hash table
@@ -12,7 +12,7 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 
 	if (ht == NULL || key == NULL)
 		return (NULL);
-	idx = key->idex((const unsigned char *)key, ht->size);
+	idx = key_index((const unsigned char *)key, ht->size);
 	tmp = ht->array[idx];
 
 	if (tmp == NULL)
